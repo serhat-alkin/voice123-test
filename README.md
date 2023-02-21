@@ -2,6 +2,9 @@
 
 
 # Setup
+Start by cloning this repository<br />
+`git clone https://github.com/serhat-alkin/voice123-test` <br />
+
 Execute these commands below on project root folder to install all dependencies <br />
 `cd server && npm install` <br />
 `cd ..`<br />
@@ -19,12 +22,14 @@ To run backend tests<br />
 * 20/02/2023 16:30 PM - Started testing the sample endpoint using postman and examined response body and headers.
 * 20/02/2023 17:30 - 18:30 - I asked my questions regarding requirements and also started thinking about how i can design the solution.
 * I didn't code anything on first day.
-* 21/02/2023  2:07 PM - Created node and react project template and pushed to the github
-* 21/02/2023  2-07 PM - 5:07 PM - Started writing backend tests and then search api logic. Committed backend logic to github, tested it using postman
-* 21/02/2023  5-07 PM - 8:42 PM - Implemented frontend logic using react and comitted my code to github. Tested implementation using UI
+* 21/02/2023  2:07 PM - Created node and react project template and pushed to the github.
+* 21/02/2023  2-07 PM - 5:07 PM - Started writing backend tests and then search api logic. Committed backend logic to github, tested it using postman.
+* 21/02/2023  5-07 PM - 8:42 PM - Implemented frontend logic using react and comitted my code to github. Tested implementation using UI.
 * 21/02/2023  8:42 PM - 8:57 PM - Updated project setup to run both backend and frontend with one command. 
+* 21/02/2023  9:00 PM - 10:00 PM - Update readme file and push latest changes.
+* Requirement analysis and planning took about 2:30 hours.
+* Implementation took around 7 hours.
  
-
 
 # Technical notes and future work
 * I had issues on getting 4 custom headers (x-list-page-size, x-list-total-rows, x-list-current-page, x-list-total-pages).I was able to see them on postman, node-server and browser but couldn't get them in react. To be able to get them in react, i returned a custom response from node server to front-end.
