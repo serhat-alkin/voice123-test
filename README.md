@@ -34,3 +34,10 @@ To run backend tests<br />
 * API keeps returning data for only &page=1. I would review the API to figure out why it works this way.
 * I would explore and implement caching techniques in React.
 * Note that during my three years at BunnyStudio, I shipped a few front-end features to production. Primarily worked with Camunda workflows, created backend APIs, and performed some DevOps tasks. Although I had a basic knowledge of React and Angular at the time, this experience provided me with the opportunity to further improve my front-end development skills.
+
+
+# Local test results
+
+<img src="client/public/Screenshot from 2023-02-21 22-07-11.png" alt="Alt text">
+
+<img src="client/public/Screenshot from 2023-02-21 22-07-24.png" alt="Alt text">
