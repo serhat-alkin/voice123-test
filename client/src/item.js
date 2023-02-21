@@ -8,7 +8,7 @@ function Item({ result }) {
     <div>
 			<div className="wrapper">
 				<img src ={result?.user?.picture_small || userDefault} className="imageCircular"></img>
-				<p><a href={url + result.id}  target="_blank" rel="noopener noreferrer">{result.user.name}</a></p>
+				<p><a href={url + result.user.username}  target="_blank" rel="noopener noreferrer">{result.user.name}</a></p>
 			</div>
 			<audio src={result.relevant_sample.file} controls />
 			<p className="customP">{result.summary}</p>

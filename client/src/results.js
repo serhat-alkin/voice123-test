@@ -3,24 +3,23 @@ import React, { useState, useEffect } from 'react';
 import Item from './item';
 import axios from 'axios';
 
+const url = 'http://localhost:5000/api';
+
 function SearchResults({ searchText }) {
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(4);
-  const [totalPages, setTotalPages] = useState(2);
+  const [pageSize, setPageSize] = useState(10);
+  const [totalPages, setTotalPages] = useState(1);
   const [totalRows, setTotalRows] = useState(9);
 
   useEffect(() => {
     const fetchResults = async () => {
-      const response = await axios.get(`http://localhost:5000/api?keywords=${searchText}&page=${currentPage}`);  
+      const response = await axios.get(`${url}?keywords=${searchText}&page=${currentPage}`);  
       console.log(response.data.providers);
       setResults(response.data.providers);
-      setPageSize(parseInt(response.data['x-list-page-size']) ||  2);
-      setTotalPages(parseInt(response.data['x-list-total-pages'] || 5 ));
-      setTotalRows(parseInt(response.data['x-list-total-rows']) || response.data.providers.length);
-
-      console.log(totalRows);
-      
+      setPageSize(parseInt(response.data['x-list-page-size']) ||  10);
+      setTotalPages(parseInt(response.data['x-list-total-pages'] || 1 ));
+      setTotalRows(parseInt(response.data['x-list-total-rows']) || response.data.providers.length);      
     };
 
     if (searchText) {
