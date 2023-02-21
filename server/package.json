@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --runInBand --no-cache",
     "start": "node server",
-    "dev": "nodemon server"
+    "client": "cd .. && cd client && npm start",
+    "dev": "concurrently \"nodemon server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
+    "concurrently": "^6.5.1",
     "nodemon": "^2.0.20"
   }
 }
